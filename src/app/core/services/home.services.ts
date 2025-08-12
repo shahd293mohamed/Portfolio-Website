@@ -11,7 +11,6 @@ export class HomeServices {
 
   constructor(private http: HttpClient) { }
 
-  // Get all projects
   getHome(): Observable<Ihome[]> {
     return this.http.get<Ihome[]>(this.baseUrl);
   }
@@ -20,12 +19,10 @@ export class HomeServices {
     return this.http.get<Ihome>(`${this.baseUrl}/${id}`);
   }
 
-  // Add a new project (with image upload)
   addHome(formData: FormData): Observable<Ihome> {
     return this.http.post<Ihome>(this.baseUrl, formData);
   }
 
-  // Update a project
   updateHome(id: string, formData: FormData): Observable<Ihome> {
     return this.http.put<Ihome>(`${this.baseUrl}/${id}`, formData);
   }
