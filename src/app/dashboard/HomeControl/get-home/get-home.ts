@@ -1,15 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-get-home',
-//   imports: [],
-//   templateUrl: './get-home.html',
-//   styleUrl: './get-home.css'
-// })
-// export class GetHome {
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../../../core/services/projects.services';
 import { Ihome, Iprojects } from '../../../core/model';
