@@ -1,15 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-manage-about',
-//   imports: [],
-//   templateUrl: './manage-about.html',
-//   styleUrl: './manage-about.css'
-// })
-// export class ManageAbout {
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { AboutService } from '../../../core/services/about.services';
 import { Iabout } from '../../../core/model';
