@@ -1,15 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-update-about',
-//   imports: [],
-//   templateUrl: './update-about.html',
-//   styleUrl: './update-about.css'
-// })
-// export class UpdateAbout {
-
-// }
-
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
