@@ -1,0 +1,59 @@
+.expertise {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-header .subtitle {
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-header .title {
+  font-size: 36px;
+  color: #e74c3c;
+  margin: 10px 0 40px;
+}
+
+/* Services Grid */
+.services-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-item {
+  background-color: #fff;
+  width: 240px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

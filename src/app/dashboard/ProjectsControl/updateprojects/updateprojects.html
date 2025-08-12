@@ -1,0 +1,12 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+  <input type="text" formControlName="title" placeholder="Title">
+  <textarea formControlName="description" placeholder="Description"></textarea>
+  <input type="text" formControlName="catagory" placeholder="Category">
+  <input type="text" formControlName="technologies" placeholder="Technologies (comma separated)">
+  <input type="text" formControlName="demoLink" placeholder="Demo Link">
+  <input type="text" formControlName="githubLink" placeholder="GitHub Link">
+
+  <input type="file" (change)="onFileChange($event)">
+
+  <button type="submit">Update Project</button>
+</form>

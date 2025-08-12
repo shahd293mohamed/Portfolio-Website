@@ -1,0 +1,9 @@
+@if (aboutForm) {
+  <form [formGroup]="aboutForm" (ngSubmit)="submit()">
+    Name: <input type="text" formControlName="name"><br>
+    Title: <input type="text" formControlName="title"><br>
+    Bio: <textarea formControlName="bio"></textarea><br>
+    Image: <input type="file" (change)="onFileChange($event)"><br>
+    <button type="submit">Update</button>
+  </form>
+}

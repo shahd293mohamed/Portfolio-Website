@@ -1,0 +1,58 @@
+<!-- <main>
+    <section class="portfolio">
+      <div class="section-header">
+        <p class="subtitle">OUR WORK</p>
+        <h1 class="title">Awesome Works</h1>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-item">
+          <img
+            src="images/real-estate-laptop.png"
+            alt="Laptop showing real estate re-branding"
+          />
+          <div class="project-info">
+            <p class="category">{{projectdata[1].catagory}}</p>
+            <h2 class="project-title">{{projectdata[1].title}}</h2>
+            <a href="#" class="btn">Project Detail</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img
+            src="images/sport-team-laptop.png"
+            alt="Laptop showing sport team web design"
+          />
+          <div class="project-info">
+            <p class="category">Web Design</p>
+            <h2 class="project-title">OFFICIAL SPORT TEAM WEB-DESIGN</h2>
+            <a href="#" class="btn">Project Detail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main> -->
+
+
+  <main>
+  <section class="portfolio">
+    <div class="section-header">
+      <p class="subtitle">OUR WORK</p>
+      <h1 class="title">Awesome Works</h1>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-item" *ngFor="let project of projectdata">
+        <img
+          [src]="'http://localhost:3000/image/' + project.image" 
+          [alt]="project.title"
+        />
+        <div class="project-info">
+          <p class="category">{{ project.catagory }}</p>
+          <h2 class="project-title">{{ project.title }}</h2>
+          <a href="#" class="btn">Project Detail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

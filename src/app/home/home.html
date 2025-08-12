@@ -1,0 +1,21 @@
+@if(homedata.length > 0){
+<main>
+    <section class="intro">
+    <div class="profile-pic">
+    <img  
+     [src]="'http://localhost:3000/image/' + homedata[0].image" 
+     alt="image for '{{homedata[0].name}}'" />
+    </div>
+    <h1 *ngIf="homedata.length > 0">Hello, I'm <span>{{homedata[0].name}}</span></h1>
+    <p *ngIf="homedata.length > 0">
+        {{homedata[0].bio}}
+    </p>
+    <button class="get-started">Get Started</button>
+    </section>
+
+
+    <footer>
+      <p>Follow Me! <a href="#">@reallygreatsite</a></p>
+    </footer>
+  </main>
+}

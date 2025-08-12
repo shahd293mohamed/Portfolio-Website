@@ -1,0 +1,17 @@
+<div *ngIf="isLoading">Loading projects...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<div *ngIf="!isLoading && home.length > 0">
+  <div *ngFor="let project of home" class="project-card" >
+    <img *ngIf="project.image" 
+         [src]="'http://localhost:3000/image/' + project.image" 
+         alt="{{ project.name }}">
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.bio }}</p>
+  </div>
+</div>
+<br>
+
+<div *ngIf="!isLoading && home.length === 0">
+  No home found.
+</div>

@@ -1,0 +1,38 @@
+<!-- <div *ngIf="isLoading">Loading projects...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<div *ngIf="!isLoading && getservices.length > 0">
+  <div *ngFor="let getservices of getservices" class="project-card">
+    <img *ngIf="project.image" 
+         [src]="'http://localhost:3000/image/' + project.image" 
+         alt="{{ project.title }}"> 
+    <h3>{{ getservices.title }}</h3>
+    <p>{{ getservices.description }}</p>
+    <p><strong>Category:</strong> {{ getservices.icon }}</p>
+  </div>
+</div>
+
+<div *ngIf="!isLoading && getservices.length === 0">
+  No projects found.
+</div> -->
+
+
+
+<div *ngIf="isLoading">Loading services...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<div *ngIf="!isLoading && getsevices.length > 0">
+  <div *ngFor="let service of getsevices" class="project-card">
+    <!-- <img *ngIf="service.image" 
+         [src]="'http://localhost:3000/image/' + service.image" 
+         [alt]="service.title"> -->
+    <h3>{{ service.title }}</h3>
+    <p>{{ service.description }}</p>
+    <p><strong>Icon:</strong> {{ service.icon }}</p>
+  </div>
+</div>
+
+<div *ngIf="!isLoading && getsevices.length === 0">
+  No services found.
+</div>
+

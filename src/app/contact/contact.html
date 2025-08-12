@@ -1,0 +1,111 @@
+<!-- <section class="contact-section container">
+    <div class="contact-info">
+      <h1>Contact Us</h1>
+      <p>
+        Whether you have questions about our services, need support, or want to share your feedback,
+        our dedicated team is here to assist you every step of the way.
+      </p>
+
+      <div class="contact-details">
+        <div class="detail">
+          <span class="icon">📧</span>
+          <div>
+            <strong>Email</strong>
+            <p>hello@reallygreatsite.com</p>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="icon">🌐</span>
+          <div>
+            <strong>Website</strong>
+            <p>reallygreatsite.com</p>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="icon">📞</span>
+          <div>
+            <strong>Phone</strong>
+            <p>+123-456-7890</p>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="icon">📍</span>
+          <div>
+            <strong>Location</strong>
+            <p>123 Anywhere St., Any City</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="contact-form">
+      <h2>Get in touch.</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email Address">
+        <input type="tel" placeholder="Phone Number">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section> -->
+
+
+  <section class="contact-section container">
+  <!-- Contact Info -->
+  <div class="contact-info" *ngIf="contactInfo">
+    <h1>Contact Us</h1>
+    <p>
+      Whether you have questions about our services, need support, or want to share your feedback,
+      our dedicated team is here to assist you every step of the way.
+    </p>
+
+    <div class="contact-details">
+      <div class="detail">
+        <span class="icon">📧</span>
+        <div>
+          <strong>Email</strong>
+          <p>{{ contactInfo[0].email }}</p>
+        </div>
+      </div>
+      <div class="detail" >
+        <span class="icon">🌐</span>
+        <div>
+          <strong>Phone</strong>
+          <p>{{ contactInfo[0].phone }}</p>
+        </div>
+      </div>
+      <div class="detail" >
+        <span class="icon">📞</span>
+        <div>
+          <strong>Linkedin</strong>
+          <p>{{ contactInfo.linkedin }}</p>
+        </div>
+      </div>
+      <div class="detail" >
+        <span class="icon">📍</span>
+        <div>
+          <strong>GitHub</strong>
+          <p>{{ contactInfo.github }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>Get in touch.</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="submitMessage()">
+      <input type="text" formControlName="name" placeholder="Your Name">
+      <input type="email" formControlName="email" placeholder="Email Address">
+      <input type="tel" formControlName="phone" placeholder="Phone Number">
+      <textarea formControlName="message" placeholder="Message"></textarea>
+      <button type="button" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+</section>
+

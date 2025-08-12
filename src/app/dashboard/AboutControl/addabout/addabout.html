@@ -1,0 +1,33 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+  Name:
+  <input type="text" formControlName="name">
+
+  Title:
+  <input type="text" formControlName="title">
+
+  Bio:
+  <textarea formControlName="bio"></textarea>
+
+  Resume Link:
+  <input type="text" formControlName="resumelink">
+
+  Facebook:
+  <input type="text" formControlName="facebook">
+
+  Twitter:
+  <input type="text" formControlName="twitter">
+
+  Instagram:
+  <input type="text" formControlName="instagram">
+
+  GitHub:
+  <input type="text" formControlName="github">
+
+  LinkedIn:
+  <input type="text" formControlName="linkedin">
+
+  Profile Image:
+  <input type="file" (change)="onFileChange($event)">
+
+  <button type="submit">Save</button>
+</form>

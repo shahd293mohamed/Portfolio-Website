@@ -1,0 +1,9 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+  <input type="text" formControlName="name" placeholder="Nmae">
+  <textarea formControlName="bio" placeholder="Bio"></textarea>
+
+
+  <input type="file" (change)="onFileChange($event)">
+
+  <button type="submit">Update Home</button>
+</form>

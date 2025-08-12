@@ -1,0 +1,17 @@
+<div *ngIf="aboutData; else noAbout">
+  <h2>{{ aboutData.name }}</h2>
+  <p><strong>Title:</strong> {{ aboutData.title }}</p>
+  <p><strong>Bio:</strong> {{ aboutData.bio }}</p>
+  
+  <img *ngIf="aboutData.profileImage" 
+       [src]="'http://localhost:3000/' + aboutData.profileImage" 
+       alt="Profile" 
+       width="150" />
+
+  <br /><br />
+  <button (click)="updateAbout()">Update</button>
+</div>
+
+<ng-template #noAbout>
+  <p>No about information found.</p>
+</ng-template>

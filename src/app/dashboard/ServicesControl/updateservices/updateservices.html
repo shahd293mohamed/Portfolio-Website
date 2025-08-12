@@ -1,0 +1,7 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+  <input type="text" formControlName="title" placeholder="Title">
+  <textarea formControlName="description" placeholder="Description"></textarea>
+  <input type="text" formControlName="icon" placeholder="Icon">
+
+  <button type="submit">Update Project</button>
+</form>

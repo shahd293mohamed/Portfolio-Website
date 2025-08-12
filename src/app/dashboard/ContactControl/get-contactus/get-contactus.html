@@ -1,0 +1,16 @@
+<div *ngIf="isLoading">Loading projects...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<div *ngIf="!isLoading && contact.length > 0">
+  <div *ngFor="let project of contact" class="project-card" >
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.email }}</p>
+    <p>{{ project.message }}</p>
+    <p>{{ project.phone }}</p>
+  </div>
+</div>
+<br>
+
+<div *ngIf="!isLoading && contact.length === 0">
+  No home found.
+</div>

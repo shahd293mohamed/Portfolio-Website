@@ -1,0 +1,27 @@
+<main>
+    <section class="about">
+      <div class="image-container">
+       <img *ngIf="aboutdata.length > 1" 
+     [src]="'http://localhost:3000/image/' + aboutdata[1].profileImage" 
+     alt="Claudia Alves" />
+
+        <div class="badge">10 Years Experience</div>
+      </div>
+      <div class="text-content" *ngIf="aboutdata.length > 0">
+        <h2>{{aboutdata[1].name}}</h2>
+        <p>
+          {{aboutdata[1].bio}}
+        </p>
+
+        <h3>Education</h3>
+        <p><strong>{{aboutdata[1].collage}}</strong><br />
+        {{aboutdata[1].major}}<br />
+        {{aboutdata[1].startYear}} to {{aboutdata[1].endYear}}</p>
+
+        <a href="#" class="download-btn">Download CV</a>
+      </div>
+    </section>
+  </main>
+
+
+

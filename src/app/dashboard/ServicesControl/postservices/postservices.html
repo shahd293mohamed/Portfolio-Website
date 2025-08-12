@@ -1,0 +1,10 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+  <input type="text" formControlName="title" placeholder="Title">
+  <textarea formControlName="description" placeholder="Description"></textarea>
+  <input type="text" formControlName="icon" placeholder="Icon">
+ 
+
+  <input type="file" (change)="onFileChange($event)">
+
+  <button type="submit">Add service</button>
+</form>

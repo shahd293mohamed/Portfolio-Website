@@ -1,0 +1,65 @@
+<!-- <main>
+    <section class="expertise">
+      <div class="section-header">
+        <p class="subtitle">MY EXPERTISE</p>
+        <h1 class="title">What Service Do I Provide</h1>
+      </div>
+      <div class="services-grid">
+        <div class="service-item">
+          <img src="" alt="Branding dan Logo icon" />
+          <h3>Branding dan Logo</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros
+            dui, tincidunt at dictum sit amet, blandit ac mauris. Sed maximus
+            accumsan orci, eget sodales.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="" alt="Print and digital icon" />
+          <h3>Print and digital</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros
+            dui, tincidunt at dictum sit amet, blandit ac mauris. Sed maximus
+            accumsan orci, eget sodales.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="" alt="Typography and layout icon" />
+          <h3>Typography and layout</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros
+            dui, tincidunt at dictum sit amet, blandit ac mauris. Sed maximus
+            accumsan orci, eget sodales.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="" alt="Web Design icon" />
+          <h3>Web Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eros
+            dui, tincidunt at dictum sit amet, blandit ac mauris. Sed maximus
+            accumsan orci, eget sodales.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main> -->
+
+  <main>
+  <section class="expertise">
+    <div class="section-header">
+      <p class="subtitle">MY EXPERTISE</p>
+      <h1 class="title">What Service Do I Provide</h1>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-item" *ngFor="let service of servicesdata">
+        <!-- Using Font Awesome icons -->
+        <i [class]="service.icon"></i>
+
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+  </section>
+</main>
